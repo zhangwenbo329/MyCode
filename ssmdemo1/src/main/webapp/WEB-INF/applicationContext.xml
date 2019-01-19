@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+<context:property-placeholder location="WEB-INF/db.properties"/>
+    <bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
+        <property name="password" value="${dbPass}"/>
+        <property name="user" value="${dbName}"/>
+        <property name="jdbcUrl" value="${driverUrl}"/>
+        <property name="driverClass" value="${driverClass}"/>
+</bean>
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="typeAliasesPackage" value="com.yujian.model"/>
+        <!--<property name="mapperLocations" value="classpath*:com/yujian/dao/*Mapper.xml"/>-->
+    </bean>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" id="configurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.yujian.dao"/>
+    </bean>
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="transactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- 扫描所有组件，排除web包下面后缀是Controller的控制器 -->
+    <context:component-scan base-package="com.yujian">
+        <context:exclude-filter type="regex" expression="com.yujian.controller.*Controller"/>
+    </context:component-scan>
+    <aop:aspectj-autoproxy/>
+    <tx:annotation-driven/>
+</beans>

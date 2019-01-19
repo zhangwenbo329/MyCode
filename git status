@@ -1,0 +1,47 @@
+[33mcommit c034a16ccd388ede5bae8a6a9abca1212edb547a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 12:49:59 2019 +0800
+
+    remove test.txt
+
+[33mcommit 445e78b6e8ecab75eea3576139a2ecd6476648f1[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 12:37:19 2019 +0800
+
+    add test.txt
+
+[33mcommit 2bdba846b29dfd2f175dd2def383ae1847c585fc[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 12:23:32 2019 +0800
+
+    git tracks changes of file
+
+[33mcommit f92bd73bafaabfce022480e905b0faadd1fcadeb[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 12:12:25 2019 +0800
+
+    git tracks changes
+
+[33mcommit 14e7580ecec5c8167cc1c50b2b0680b5e72dcee1[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 12:05:57 2019 +0800
+
+    understand how stage works
+
+[33mcommit 828e6357d0eee6eafb866419d1de50f787b211ce[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 11:33:55 2019 +0800
+
+    append GPL
+
+[33mcommit dac9202c63106a6d7f26a4c259661a9020b0bbc4[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 11:28:37 2019 +0800
+
+    add distributed
+
+[33mcommit e32219972316e8f9e3d9e535bbfb771969e3d7f6[m
+Author: zhangwenbo <1611330403.@qq.com>
+Date:   Sat Jan 19 11:21:58 2019 +0800
+
+    wrote a readme file
